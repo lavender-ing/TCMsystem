@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6a0ef568-fe26-4282-a5c2-14f3665c8c5d" name="Changes" comment="Changes" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="W:\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2M58y7FbudEvgFwmI1fmicEPNyf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/zhoujian/Workspaces/git/TCMsystem/springboot-back",
+    "settings.editor.selected.configurable": "advanced.settings",
+    "settings.editor.splitter.proportion": "0.14108674",
+    "spring.configuration.checksum": "e1a11a842edc81bc003322cf9e961b27",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.market.service" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="springboot-back" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="springboot-back" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MarketApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot-back" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.indexmanager.IndexManagerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6a0ef568-fe26-4282-a5c2-14f3665c8c5d" name="Changes" comment="" />
+      <created>1677046334404</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677046334404</updated>
+      <workItem from="1677046336937" duration="1855000" />
+      <workItem from="1677070266442" duration="1240000" />
+      <workItem from="1677120573574" duration="8790000" />
+      <workItem from="1677159071010" duration="486000" />
+      <workItem from="1677222043760" duration="8438000" />
+      <workItem from="1677304421933" duration="9028000" />
+      <workItem from="1677386117979" duration="8735000" />
+      <workItem from="1677402834602" duration="8120000" />
+      <workItem from="1677473727607" duration="6822000" />
+      <workItem from="1677495322655" duration="3222000" />
+      <workItem from="1677639255558" duration="5978000" />
+      <workItem from="1677734173388" duration="4352000" />
+      <workItem from="1678085934275" duration="281000" />
+      <workItem from="1678100073567" duration="3371000" />
+      <workItem from="1678520324162" duration="1222000" />
+      <workItem from="1678533983495" duration="1498000" />
+      <workItem from="1678583864252" duration="8083000" />
+      <workItem from="1678624443196" duration="3792000" />
+      <workItem from="1678706154376" duration="5408000" />
+      <workItem from="1678714787801" duration="956000" />
+      <workItem from="1678801660585" duration="651000" />
+      <workItem from="1678843852800" duration="3473000" />
+      <workItem from="1678931000804" duration="13144000" />
+      <workItem from="1678954626686" duration="145000" />
+      <workItem from="1679050951236" duration="928000" />
+      <workItem from="1680337042700" duration="51000" />
+      <workItem from="1683202416400" duration="414000" />
+      <workItem from="1683202870245" duration="727000" />
+      <workItem from="1683251656040" duration="2831000" />
+      <workItem from="1683260034191" duration="238000" />
+      <workItem from="1683267158296" duration="39000" />
+      <workItem from="1683286062485" duration="117000" />
+      <workItem from="1683286223331" duration="817000" />
+      <workItem from="1683287583241" duration="20000" />
+      <workItem from="1683289235045" duration="211000" />
+      <workItem from="1683289933862" duration="579000" />
+      <workItem from="1683291289472" duration="761000" />
+      <workItem from="1683293113316" duration="28000" />
+      <workItem from="1683298301072" duration="65000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
