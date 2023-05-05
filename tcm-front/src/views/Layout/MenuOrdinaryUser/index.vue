@@ -9,7 +9,7 @@
       active-text-color="#ffd04b">
 
       <el-menu-item>
-        <span slot="title">普通用户</span>
+        <span slot="title">医务人员</span>
       </el-menu-item>
 
       <!-- <el-menu-item index="/">

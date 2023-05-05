@@ -12,10 +12,10 @@
         <span slot="title">管理员</span>
       </el-menu-item>
 
-      <!-- <el-menu-item index="/">
+      <el-menu-item index="/manager/usermanagement/list">
         <i class="el-icon-s-home"></i>
-        <span slot="title">子模块</span>
-      </el-menu-item> -->
+        <span slot="title">用户管理</span>
+      </el-menu-item>
 
     </el-menu>
   </div>

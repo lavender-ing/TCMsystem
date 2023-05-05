@@ -2,8 +2,8 @@
   <div class="layout" v-if="this.$store.state.isLogin">
     <!-- 导航栏 -->
     <div class="menu">
-        <MenuOrdinaryUser v-if="this.$store.state.character=='普通用户'"></MenuOrdinaryUser>
-        <MenuManager v-else></MenuManager>
+      <MenuManager v-if="管理员"></MenuManager>
+      <MenuOrdinaryUser v-else></MenuOrdinaryUser>
     </div>
     <!-- 内容 -->
     <div class="content">

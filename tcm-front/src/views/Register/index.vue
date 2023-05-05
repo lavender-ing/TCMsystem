@@ -15,6 +15,10 @@
         <el-input v-model="ruleForm.phone"></el-input>
       </el-form-item>
 
+      <el-form-item label="角色" prop="character">
+        <el-input v-model="ruleForm.character" disabled></el-input>
+      </el-form-item>
+
       <el-form-item label="安全问题" prop="question">
         <el-input v-model="ruleForm.question"></el-input>
       </el-form-item>
@@ -52,6 +56,7 @@ export default {
         username:'',
         password:'',
         phone:'',
+        character:'医务人员',
         question:'',
         answer:''
       },
@@ -59,6 +64,7 @@ export default {
         username: [{required: true, message: '', trigger: 'blur'}],
         password: [{required: true, message: '', trigger: 'blur'}],
         phone: [{required: true, message: '', trigger: 'blur'},{validator: checkMobile, trigger: 'blur'}],
+        character: [{required: true, message: '', trigger: 'blur'}],
         question: [{required: true, message: '', trigger: 'blur'}],
         answer: [{required: true, message: '', trigger: 'blur'}],
       }
@@ -74,8 +80,8 @@ export default {
           this.$axios.post('/user/register',{
             username:this.ruleForm.username,
             password:this.ruleForm.password,
-            character:'普通用户',
             phone:this.ruleForm.phone,
+            character:this.ruleForm.character,
             registertime:new Date(),
             lastlogin:new Date(),
             question:this.ruleForm.question,

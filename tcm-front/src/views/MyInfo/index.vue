@@ -3,7 +3,7 @@
     
     <el-upload
       class="avatar-uploader"
-      action="http://localhost:8081/upload/profile"
+      action="http://localhost:8081/upload/file"
       :show-file-list="false"
       :on-success="handleAvatarSuccess"
       :before-upload="beforeAvatarUpload"
@@ -74,6 +74,7 @@
 </template>
 
 <script>
+import dateformat from '@/utils/dateformat';
 export default {
   data() {
 
@@ -121,6 +122,8 @@ export default {
   },
   created(){
     this.ruleForm=this.$store.state.user
+    this.ruleForm.registertime=dateformat.format(this.ruleForm.registertime)
+    this.ruleForm.lastlogin=dateformat.format(this.ruleForm.lastlogin)
   },
   methods: {
     submitForm(formName) {
