@@ -1,2 +1,6 @@
-
 .DS_Store
+.idea
+.mvn
+.target
+workspace.xml
+*.class
