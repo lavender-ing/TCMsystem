@@ -12,10 +12,20 @@
         <span slot="title">医务人员</span>
       </el-menu-item>
 
-      <!-- <el-menu-item index="/">
+      <el-menu-item index="/ordinaryuser/onlinecluster">
         <i class="el-icon-s-home"></i>
-        <span slot="title">子模块</span>
-      </el-menu-item> -->
+        <span slot="title">在线聚类</span>
+      </el-menu-item>
+
+      <el-menu-item index="/ordinaryuser/note">
+        <i class="el-icon-s-home"></i>
+        <span slot="title">证型标注</span>
+      </el-menu-item>
+
+      <el-menu-item index="/ordinaryuser/suggest">
+        <i class="el-icon-s-home"></i>
+        <span slot="title">建议反馈</span>
+      </el-menu-item>
 
     </el-menu>
   </div>

@@ -16,9 +16,11 @@ import UserManagementInsert from '@/views/Manager/UserManagement/Insert'
 import UserManagementDetail from '@/views/Manager/UserManagement/Detail'
 import UserManagementUpdate from '@/views/Manager/UserManagement/Update'
 
-
 //普通用户————————————————————————————————
 import OrdinaryUser from '@/views/OrdinaryUser'
+import OnlineCluster from '@/views/OrdinaryUser/OnlineCluster'
+import Suggest from '@/views/OrdinaryUser/Suggest'
+import Note from '@/views/OrdinaryUser/Note'
 
 Vue.use(Router)
 
@@ -105,7 +107,21 @@ const router = new Router({
           name:'ordinaryuser',
           component:OrdinaryUser,
           children:[
-
+            {
+              path: 'onlinecluster',
+              name: 'onlinecluster',
+              component: OnlineCluster
+            },
+            {
+              path: 'suggest',
+              name: 'suggest',
+              component: Suggest
+            },
+            {
+              path: 'note',
+              name: 'note',
+              component: Note
+            }
           ]
         },
       ]
