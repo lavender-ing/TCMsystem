@@ -1,5 +1,7 @@
 <template>
-  <h1>管理员</h1>
+  <div>
+    <router-view/>
+  </div>
 </template>
 
 <script>

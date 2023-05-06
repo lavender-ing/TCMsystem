@@ -3,6 +3,7 @@ package com.example.indexmanager.service;
 import com.example.indexmanager.pojo.User;
 
 import java.util.Date;
+import java.util.List;
 
 public interface UserService {
 
@@ -20,4 +21,10 @@ public interface UserService {
     public String getQuestion(String username);
 
     public int updatePassword(User user);
+
+    /*获取所有用户信息*/
+    public List<User> getAll();
+
+    /*删除用户*/
+    public int delete(int id);
 }

@@ -99,7 +99,7 @@ export default {
             isLogin:true
           })
           if(res.data.result.character=='管理员'){
-            this.$router.replace('/manager')
+            this.$router.replace('/manager/usermanagement/list')
           }else{
             this.$router.replace('/ordinaryuser')
           }

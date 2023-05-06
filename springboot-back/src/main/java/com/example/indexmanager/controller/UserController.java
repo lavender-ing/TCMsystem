@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
+import java.util.List;
 
 @RestController
 @CrossOrigin
@@ -62,6 +63,21 @@ public class UserController {
             return ResultFactory.makeSuccessResult(null);
         }else {
             return ResultFactory.makeErrorResult("重置失败！");
+        }
+    }
+
+    @GetMapping("/getall")
+    public Result getAll(){
+        return ResultFactory.makeSuccessResult(userService.getAll());
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public Result delete(@PathVariable int id){
+        int res = userService.delete(id);
+        if(res>0){
+            return ResultFactory.makeSuccessResult("删除成功！");
+        }else {
+            return ResultFactory.makeErrorResult("删除失败！");
         }
     }
 }
