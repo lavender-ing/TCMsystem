@@ -1,6 +1,6 @@
 <template>
     <div>
-        当前证型标注
+        <h1>当前证型标注</h1>
         <ClusterList></ClusterList>
     </div>
   </template>

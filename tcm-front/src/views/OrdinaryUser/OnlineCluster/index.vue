@@ -1,6 +1,6 @@
 <template>
   <div>
-      当前聚类主题
+      <h1>当前聚类主题</h1>
       <OperationList></OperationList>
   </div>
 </template>
