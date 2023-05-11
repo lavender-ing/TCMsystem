@@ -84,15 +84,21 @@ export default {
       loadData(){
         this.tableData = [{
           id: '1',
-          username: '王小虎',
+          username: 'user2',
           createtime: '2022-12-12',
           name: '高血压数据聚类',
           viewnumber: '2'
         }, {
           id: '2',
-          username: '李明',
-          createtime: '2023-12-12',
+          username: 'user3',
+          createtime: '2022-12-12',
           name: '糖尿病数据聚类',
+          viewnumber: '2'
+        }, {
+          id: '3',
+          username: 'user4',
+          createtime: '2022-12-12',
+          name: '感冒数据聚类',
           viewnumber: '2'
         }]
       },

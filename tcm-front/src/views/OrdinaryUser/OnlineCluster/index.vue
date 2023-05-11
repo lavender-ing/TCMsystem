@@ -9,8 +9,6 @@
 <script>
 import OperationList from './List'
 export default {
-
-
 components: {
     OperationList
 }
