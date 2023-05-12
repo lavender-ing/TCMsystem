@@ -54,7 +54,9 @@
 
             <el-button
               size="mini"
-              @click="handleUpdate(scope.$index, scope.row)">修改</el-button>
+              @click="handleUpdate=true">修改</el-button>
+
+
 
             <el-button
               size="mini"
@@ -63,8 +65,34 @@
           </template>
         </el-table-column>
 
+
+
       </el-table>
+
     </div>
+    <el-dialog title="修改聚类标记信息" :visible.sync="handleUpdate">
+          <el-form :model="tableData">
+            <el-form-item label="聚类名称" :label-width="formLabelWidth">
+            <el-input v-model="tableData.name" autocomplete="off"></el-input>
+             </el-form-item>
+        
+             <el-form-item label="视图数量" :label-width="formLabelWidth">
+                <el-select v-model="tableData.viewnumber" placeholder="请选择视图数量">
+              <el-option label="1" value="1种视图"></el-option>
+             <el-option label="2" value="2种视图"></el-option>
+             <el-option label="3" value="3种视图"></el-option>
+             
+               </el-select>
+          </el-form-item>
+         
+        </el-form>
+  <div slot="footer" class="dialog-footer">
+    <el-button @click="handleUpdate = false" >取 消</el-button>
+    <el-button type="primary" @click="handleUpdate = false" >确 定</el-button>
+  </div>
+          </el-dialog>
+
+
   </div>
 </template>
 
@@ -73,7 +101,10 @@ export default {
   data() {
     return {
       tableData: [],
-      srcList:['']
+      srcList: [''],
+      handleUpdate: false,
+      formLabelWidth: '120px'
+      
     }
   },
   created(){
@@ -101,7 +132,46 @@ export default {
           name: '感冒数据聚类',
           viewnumber: '2'
         }]
-      },
+    },
+   /* handleDetail(index, row) {
+        this.$alert('该聚类簇包括88个样本，每个样本包括2个视图的信息，属于该簇的样本均被标记为“具有高血压症状”。', '聚类详情', {
+          confirmButtonText: '确定',
+          callback: action => {
+            this.$message({
+              type: 'info',
+              message: `action: ${ action }`
+            });
+          }
+        });
+    }*/
+    handleDetail(index, row)  {
+      const h = this.$createElement;
+      var str = row.name.replace('数据聚类', '');
+        this.$msgbox({
+          title: '聚类详情',
+          message: h('p', null, [
+            h('span', null, '该聚类簇包括 '),
+            h('i', { style: 'color: teal' }, '88'),
+            h('span', null, ' 个样本，每个样本包括 '),
+            h('i', { style: 'color: teal' }, row.viewnumber),
+            h('span', null, ' 个视图的信息，属于该簇的样本均被标记为'),
+            
+            h('i', { style: 'color: teal' }, ' 具有'+str+'症状'),
+            h('span', null, '。'),
+
+          ]),
+          showCancelButton: true,
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          beforeClose: (action, instance, done) => {
+              done();
+          }
+        })
+    },
+
+    
+
+    
     }
 }
 </script>

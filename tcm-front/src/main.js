@@ -8,35 +8,35 @@ import moment from 'moment'
 import echarts from 'echarts';
 
 var axios = require('axios')
-axios.defaults.baseURL = 'http://localhost:8081/'
+axios.defaults.baseURL = 'http://localhost:8000/'
 Vue.prototype.$axios = axios
 Vue.config.productionTip = false
 Vue.prototype.$echarts = echarts;
 
 Vue.use(ElementUI);
 
-Vue.filter('dateFormat', function (dateStr,pattern = "YYYY-MM-DD HH:mm:ss") {
-  return moment(dateStr).format(pattern);
+Vue.filter('dateFormat', function(dateStr, pattern = "YYYY-MM-DD HH:mm:ss") {
+    return moment(dateStr).format(pattern);
 })
 
 //登录拦截器
 router.beforeEach((to, from, next) => {
-  if (to.meta.requireAuth) {
-    if (store.state.isLogin) {
-      next()
+    if (to.meta.requireAuth) {
+        if (store.state.isLogin) {
+            next()
+        } else {
+            next({
+                path: '/login',
+                query: { redirect: to.fullPath }
+            })
+        }
     } else {
-      next({
-        path: '/login',
-        query: {redirect: to.fullPath}
-      })
+        next()
     }
-  } else {
-    next()
-  }
 })
 
 new Vue({
-  render: h => h(App),
-  router: router,
-  store: store,
+    render: h => h(App),
+    router: router,
+    store: store,
 }).$mount('#app')

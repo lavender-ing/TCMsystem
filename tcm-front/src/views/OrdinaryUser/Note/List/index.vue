@@ -2,10 +2,10 @@
   <div>
 
     <div class="table">
-      <el-table
+      <el-table 
         :data="tableData"
         :border=true
-        style="width: 100%"
+        style="width: 100% ;text-align:left"
         :stripe=true
         :header-cell-style="{'text-align':'center'}"
         :cell-style="{'text-align':'center'}">
@@ -50,7 +50,7 @@
 
             <el-button
               size="mini"
-              @click="handleUpdate(scope.$index, scope.row)">标注</el-button>
+               @click.native="create">标注</el-button>
 
           </template>
         </el-table-column>
@@ -100,7 +100,34 @@ export default {
           describetime: '2022-12-13 8:00:20'
         }
       ]
-      },
+    },
+    handleDetail(index, row)  {
+      const h = this.$createElement;
+     var str= row.describe.replace('证','')
+        this.$msgbox({
+          title: '标注详情',
+          
+          message: h('p', null, [
+            h('span', null, '该标注包括 '),
+            h('i', { style: 'color: teal' }, '79'),
+            h('span', null, ' 个样本，每个样本均被标注为具有 '),
+            h('i', { style: 'color: teal' }, str),
+            h('span', null, '  的特征。'),
+            
+            
+          ]),
+          showCancelButton: true,
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          beforeClose: (action, instance, done) => {
+              done();
+          }
+        })
+    },
+    create() {
+      this.$router.push('create')
+    }
+
     }
 }
 </script>
@@ -117,4 +144,7 @@ export default {
     float: right;
   }
   
+  .el-dialog__body{
+    text-align: left;
+  }
   </style>

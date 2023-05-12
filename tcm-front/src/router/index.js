@@ -7,6 +7,7 @@ import Layout from '@/views/Layout'
 import MyInfo from '@/views/MyInfo'
 import Reset from '@/views/Reset'
 
+
 //管理员——————————————————————————————
 import Manager from '@/views/Manager'
 //用户管理
@@ -21,112 +22,116 @@ import OrdinaryUser from '@/views/OrdinaryUser'
 import OnlineCluster from '@/views/OrdinaryUser/OnlineCluster'
 import Suggest from '@/views/OrdinaryUser/Suggest'
 import Note from '@/views/OrdinaryUser/Note'
-
+import Create from '@/views/OrdinaryUser/Create'
 Vue.use(Router)
 
 const router = new Router({
 
-  mode: 'history',
+    mode: 'history',
 
-  routes: [
+    routes: [
 
-    //登录
-    {
-      path: '/login',
-      name: 'login',
-      component: Login,
-    },
-
-    //注册
-    {
-      path: '/register',
-      name: 'register',
-      component: Register,
-    },
-
-    //重置密码
-    {
-      path: '/reset',
-      name: 'reset',
-      component: Reset,
-    },
-
-    //其他界面
-    {
-      path: '/',
-      component: Layout,
-      meta:{
-        requireAuth:true
-      },
-      children:[
-        //当前用户详情——————————————
+        //登录
         {
-          path:'/myinfo',
-          name:'myinfo',
-          component:MyInfo,
+            path: '/login',
+            name: 'login',
+            component: Login,
         },
-        //管理员
-        {
-          path:'/manager',
-          name:'manager',
-          component:Manager,
-          children:[
-            {
-              path:'usermanagement',
-              name:'usermanagement',
-              component:UserManagement,
 
-              children:[
-                {
-                  path:'insert',
-                  name:'usermanagementinsert',
-                  component:UserManagementInsert
-                },
-                {
-                  path:'list',
-                  name:'usermanagementlist',
-                  component:UserManagementList
-                },
-                {
-                  path:'detail',
-                  name:'usermanagementdetail',
-                  component:UserManagementDetail
-                },
-                {
-                  path:'update',
-                  name:'usermanagementupdate',
-                  component:UserManagementUpdate
-                },
-              ]
-            }
-          ]
-        },
-        //普通用户
+        //注册
         {
-          path:'/ordinaryuser',
-          name:'ordinaryuser',
-          component:OrdinaryUser,
-          children:[
-            {
-              path: 'onlinecluster',
-              name: 'onlinecluster',
-              component: OnlineCluster
+            path: '/register',
+            name: 'register',
+            component: Register,
+        },
+
+        //重置密码
+        {
+            path: '/reset',
+            name: 'reset',
+            component: Reset,
+        },
+
+        //其他界面
+        {
+            path: '/',
+            component: Layout,
+            meta: {
+                requireAuth: true
             },
-            {
-              path: 'suggest',
-              name: 'suggest',
-              component: Suggest
-            },
-            {
-              path: 'note',
-              name: 'note',
-              component: Note
-            }
-          ]
+            children: [
+                //当前用户详情——————————————
+                {
+                    path: '/myinfo',
+                    name: 'myinfo',
+                    component: MyInfo,
+                },
+                //管理员
+                {
+                    path: '/manager',
+                    name: 'manager',
+                    component: Manager,
+                    children: [{
+                        path: 'usermanagement',
+                        name: 'usermanagement',
+                        component: UserManagement,
+
+                        children: [{
+                                path: 'insert',
+                                name: 'usermanagementinsert',
+                                component: UserManagementInsert
+                            },
+                            {
+                                path: 'list',
+                                name: 'usermanagementlist',
+                                component: UserManagementList
+                            },
+                            {
+                                path: 'detail',
+                                name: 'usermanagementdetail',
+                                component: UserManagementDetail
+                            },
+                            {
+                                path: 'update',
+                                name: 'usermanagementupdate',
+                                component: UserManagementUpdate
+                            },
+
+                        ]
+                    }]
+                },
+                //普通用户
+                {
+                    path: '/ordinaryuser',
+                    name: 'ordinaryuser',
+                    component: OrdinaryUser,
+                    children: [{
+                            path: 'onlinecluster',
+                            name: 'onlinecluster',
+                            component: OnlineCluster
+                        },
+                        {
+                            path: 'suggest',
+                            name: 'suggest',
+                            component: Suggest
+                        },
+                        {
+                            path: 'note',
+                            name: 'note',
+                            component: Note,
+
+                        },
+                        {
+                            path: 'create',
+                            name: 'create',
+                            component: Create
+                        }
+
+                    ]
+                },
+            ]
         },
-      ]
-    },
-  ]
+    ]
 })
 
 export default router
